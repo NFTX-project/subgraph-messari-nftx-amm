@@ -39,6 +39,7 @@ export namespace Network {
   export const DFK = "DFK";
   export const DOGECHAIN = "DOGECHAIN";
   export const MAINNET = "MAINNET"; // Ethereum mainnet
+  export const GOERLI = "GOERLI"; // Ethereum mainnet
   export const ETH_POW = "ETH_POW";
   export const ETHEREUM_CLASSIC = "ETHEREUM_CLASSIC";
   export const EVMOS = "EVMOS";
@@ -202,6 +203,7 @@ ID_BY_NETWORK.set(Network.ARBITRUM_ONE, BigInt.fromI32(42161));
 ID_BY_NETWORK.set(Network.AVALANCHE, BigInt.fromI32(43114));
 ID_BY_NETWORK.set(Network.BSC, BigInt.fromI32(56));
 ID_BY_NETWORK.set(Network.CELO, BigInt.fromI32(42220));
+ID_BY_NETWORK.set(Network.GOERLI, BigInt.fromI32(5));
 ID_BY_NETWORK.set(Network.MAINNET, BigInt.fromI32(1));
 ID_BY_NETWORK.set(Network.FANTOM, BigInt.fromI32(250));
 ID_BY_NETWORK.set(Network.XDAI, BigInt.fromI32(100));
@@ -210,6 +212,7 @@ ID_BY_NETWORK.set(Network.MATIC, BigInt.fromI32(137));
 
 export const NETWORK_BY_ID = new TypedMap<string, string>();
 NETWORK_BY_ID.set("1", Network.MAINNET);
+NETWORK_BY_ID.set("5", Network.GOERLI);
 NETWORK_BY_ID.set("10", Network.OPTIMISM);
 NETWORK_BY_ID.set("24", Network.KARDIA);
 NETWORK_BY_ID.set("25", Network.CRONOS);
@@ -303,6 +306,7 @@ INACCURATE_PRICEFEED_TOKENS.set(Network.FANTOM, []);
 INACCURATE_PRICEFEED_TOKENS.set(Network.FUSE, []);
 INACCURATE_PRICEFEED_TOKENS.set(Network.XDAI, []);
 INACCURATE_PRICEFEED_TOKENS.set(Network.HARMONY, []);
+INACCURATE_PRICEFEED_TOKENS.set(Network.GOERLI, []);
 INACCURATE_PRICEFEED_TOKENS.set(
   Network.MAINNET,
   MAINNET_INACCURATE_PRICEFEED_TOKENS
