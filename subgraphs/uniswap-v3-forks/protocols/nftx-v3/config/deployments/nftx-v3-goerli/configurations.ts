@@ -28,11 +28,11 @@ export class NftxV3GoerliConfigurations implements Configurations {
     return PROTOCOL_SLUG;
   }
   getFactoryAddress(): Bytes {
-    return Bytes.fromHexString("0x8206bf754a12205c52a98d39634393f51f38718f"); // shouldn't these be in the configuration.json?
+    return Bytes.fromHexString("0xaab56871c2f33fe49441d5a797bea1587555e8dc"); // shouldn't these be in the configuration.json?
   }
   getFactoryContract(): Factory {
     return Factory.bind(
-      Address.fromString("0x8206bf754a12205c52a98d39634393f51f38718f") // shouldn't these be in the configuration.json?
+      Address.fromString("0xaab56871c2f33fe49441d5a797bea1587555e8dc") // shouldn't these be in the configuration.json?
     );
   }
   getProtocolFeeOnOff(): string {
