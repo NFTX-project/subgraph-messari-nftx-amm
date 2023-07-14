@@ -2,6 +2,32 @@
 
 # NFTX Instructions
 
+- Update the configuration.json to include the Non Fungible Position Manager and the Uniswap Factory Upgradable.
+
+Also go into the /nftx-v3-goerli/configurations.ts and update the following sections with the new Uniswap Factory address.
+
+```ts
+  getFactoryAddress(): Bytes {
+    return Bytes.fromHexString("0xaab56871c2f33fe49441d5a797bea1587555e8dc"); // shouldn't these be in the configuration.json?
+  }
+  getFactoryContract(): Factory {
+    return Factory.bind(
+      Address.fromString("0xaab56871c2f33fe49441d5a797bea1587555e8dc") // shouldn't these be in the configuration.json?
+    );
+  }
+```
+
+Also update the configurations.ts file and add the new Stable Oracle Pool
+
+```ts
+  getStableOraclePools(): Bytes[] {
+    return stringToBytesList([
+      "0x482cedc7b6f71af4370f4107444f0657a35e07ac", // NEW USDC/WETH POOL
+      // 0xf8492c75a6c7477da43dbea5f3bf2dece0b23320 was the DAI/WETH pool used here before.
+    ]);
+  }
+```
+
 - Update the contract and blocks at `subgraphs/uniswap-v3-forks/protocols/nftx-v3/config/deployments/nftx-v3-goerli/configurations.ts` and run the following command `messari b nftx-v3-goerli -l -s hosted-service -d`
   Select `nftx-project` as the target to deploy to. Once it has been pushed you can check for liquidity pools by using the following https://thegraph.com/hosted-service/subgraph/nftx-project/nftx-v3-uniswap-goerli?playgroundQuery=135154
 
