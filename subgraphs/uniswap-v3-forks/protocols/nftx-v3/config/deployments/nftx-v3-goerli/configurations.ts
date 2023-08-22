@@ -72,7 +72,7 @@ export class NftxV3GoerliConfigurations implements Configurations {
   }
   getStableOraclePools(): Bytes[] {
     return stringToBytesList([
-      "0x482cedc7b6f71af4370f4107444f0657a35e07ac", // NEW USDC/WETH POOL
+      "0x1768ccc3fc3a40522fcd3296633ae8c00434b3b6", // NEW USDC/WETH POOL
       // 0xf8492c75a6c7477da43dbea5f3bf2dece0b23320 was the DAI/WETH pool used here before.
     ]);
   }
