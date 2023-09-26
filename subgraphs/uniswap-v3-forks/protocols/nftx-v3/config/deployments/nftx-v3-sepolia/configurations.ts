@@ -28,11 +28,11 @@ export class UniswapV3MainnetConfigurations implements Configurations {
     return PROTOCOL_SLUG;
   }
   getFactoryAddress(): Bytes {
-    return Bytes.fromHexString("0x1f98431c8ad98523631ae4a59f267346ea31f984");
+    return Bytes.fromHexString("0xDD2dce9C403f93c10af1846543870D065419E70b");
   }
   getFactoryContract(): Factory {
     return Factory.bind(
-      Address.fromString("0x1f98431c8ad98523631ae4a59f267346ea31f984")
+      Address.fromString("0xDD2dce9C403f93c10af1846543870D065419E70b")
     );
   }
   getProtocolFeeOnOff(): string {
@@ -90,7 +90,7 @@ export class UniswapV3MainnetConfigurations implements Configurations {
   }
   getStableOraclePools(): Bytes[] {
     return stringToBytesList([
-      "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8", // USDC/wETH
+      "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8", // USDC/wETH add new pool here.
     ]);
   }
   getUntrackedPairs(): Bytes[] {
