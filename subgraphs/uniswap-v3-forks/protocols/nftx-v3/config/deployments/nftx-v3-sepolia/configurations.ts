@@ -49,16 +49,16 @@ export class UniswapV3MainnetConfigurations implements Configurations {
     return RewardIntervalType.NONE;
   }
   getReferenceToken(): Bytes {
-    return Bytes.fromHexString("0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2");
+    return Bytes.fromHexString("0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14");
   }
   getRewardToken(): Bytes {
     return Bytes.fromHexString("");
   }
   getWhitelistTokens(): Bytes[] {
     return stringToBytesList([
-      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", // WETH
+      "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14", // WETH
       "0x6b175474e89094c44da98b954eedeac495271d0f", // DAI
-      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+      "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8", // USDC
       "0xdac17f958d2ee523a2206206994597c13d831ec7", // USDT
       "0x0000000000085d4780b73119b644ae5ecd22b376", // TUSD
       "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", // WBTC
@@ -81,16 +81,12 @@ export class UniswapV3MainnetConfigurations implements Configurations {
   }
   getStableCoins(): Bytes[] {
     return stringToBytesList([
-      "0x6b175474e89094c44da98b954eedeac495271d0f",
-      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "0x0000000000085d4780b73119b644ae5ecd22b376",
-      "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+      "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
     ]);
   }
   getStableOraclePools(): Bytes[] {
     return stringToBytesList([
-      "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8", // USDC/wETH add new pool here.
+      "0xcdF1597a0C2DDA04E80e135351831b7a6Af1f86d", // USDC/wETH add new pool here.
     ]);
   }
   getUntrackedPairs(): Bytes[] {
@@ -100,6 +96,6 @@ export class UniswapV3MainnetConfigurations implements Configurations {
     return stringToBytesList([]);
   }
   getMinimumLiquidityThreshold(): BigDecimal {
-    return BigDecimal.fromString("200000");
+    return BigDecimal.fromString("200");
   }
 }
